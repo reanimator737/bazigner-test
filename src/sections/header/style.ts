@@ -7,13 +7,26 @@ export const FixedContainer = styled.div`
   position: fixed;
   height: 100px;
   width: 100vw;
-  //color
   background: rgba(7, 7, 7, 0.3);
+
+  @media (max-width: 1200px) {
+    height: 90px;
+  }
+
+  @media (max-width: 991px) {
+    height: 80px;
+  }
+
+  @media (max-width: 768px) {
+    height: 60px;
+  }
 `;
 
 export const Container = styled(BaseTemplate)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
 
   svg {
     margin-top: 16px;
@@ -21,14 +34,19 @@ export const Container = styled(BaseTemplate)`
     height: 52px;
   }
 
-  @media (max-width: 768px) {
-    align-items: center;
+  @media (max-width: 991px) {
+    svg {
+      margin-top: 8px;
+      width: 110px;
+      height: auto;
+    }
   }
 `;
 
 export const MenuContainer = styled.div`
   display: flex;
   gap: 16px;
+  height: 100%;
 
   @media (max-width: 768px) {
     display: none;
@@ -42,7 +60,7 @@ export const MenuContainer = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 32px;
+      gap: 16px;
       width: 100vw;
       height: 100vh;
       background: black;
@@ -52,22 +70,27 @@ export const MenuContainer = styled.div`
 
 export const MenuItem = styled.a`
   cursor: pointer;
-  padding-top: 32px;
   transition: all 0.2s linear;
-  font-size: 13px;
-  //color
+  font-size: 1.3rem;
   color: rgb(246, 248, 249);
   border-top: 2px solid transparent;
+  height: 100%;
+  padding-top: 42px;
 
   &:hover {
-    //color
     color: rgb(73, 193, 244);
     border-top: 2px solid rgb(73, 193, 244);
   }
 
+  @media (max-width: 991px) {
+    padding-top: 36px;
+  }
+
   @media (max-width: 768px) {
+    margin-top: 32px;
     padding: 0;
-    font-size: 24px;
+    height: auto;
+    font-size: 2.4rem;
 
     &:hover {
       border: none;

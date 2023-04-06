@@ -1,8 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap');
+
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  background-color: black;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -11,7 +10,16 @@
 }
 
 *{
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
+  font-size: 10px;
+}
+
+
+@media (max-width: 768px) {
+  * {
+    font-size: 8px;
+  }
 }
 
 a {
@@ -21,8 +29,6 @@ a {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
